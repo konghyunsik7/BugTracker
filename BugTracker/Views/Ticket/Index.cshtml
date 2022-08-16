@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Ticket>
+
+<h2>Tickets</h2>
+
+   <div style="display: block">
+     <a href="/Tickets/InsertTicket/">Create a New Ticket</a>
+ </div>
+<table class="table">
+    <tr>
+        <th>TicketID</th>
+        <th>TYPE</th>
+        <th>Description</th>
+        <th>Priorty</th>
+        <th>Status</th>
+        <th>Owner</th>
+    </tr>
+
+    @foreach (var ticket in Model)
+    {
+        <tr>
+            <td>@ticket.TicketId</td>
+            <td>@ticket.Type</td>
+            <td>@ticket.Description</td>
+            <td>@ticket.Priorty</td>
+            <td>@ticket.Status</td>
+            <td>@ticket.Owner</td>
+        </tr>
+    }
+
+</table>
