@@ -1,0 +1,22 @@
+﻿@model Ticket
+
+<h3>Ticket ID #@Model.TicketID Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Ticket ID</th>
+        <th>Error Type</th>
+        <th>Description</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Submitter</th>
+    </tr>
+    <tr>
+        <td>@Model.TicketID</td>
+        <td>@Model.ErrorTypeID </td>
+        <td>@Model.Description</td>
+        <td>@Model.Priority</td>
+        <td>@Model.Status</td>
+        <td>@Model.Submitter</td>
+    </tr>
+</table>

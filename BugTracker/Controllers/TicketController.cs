@@ -20,6 +20,23 @@ namespace BugTracker.Controllers
             var ticket = repo.GetAllTicket();
             return View(ticket);
         }
+        //SELECT SIGNLE TICKET DETAILED
+        public IActionResult GetTicketinfo(int id)
+        {
+            var ticket = repo.GetTicketinfo(id);
+            return View(ticket);
+        }
+        //CREATE A TICKET
+        public IActionResult InsertTicket()
+        {
+            var tick = repo.AssignErrorType();
+            return View(tick);
+        }
+        public IActionResult InsertErrorTypeToDatabase(Ticket ticketToInsert)
+        {
+            repo.InsertTicket(ticketToInsert);
+            return RedirectToAction("Index");
+        }
 
     }
 }

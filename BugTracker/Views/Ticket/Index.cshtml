@@ -3,23 +3,23 @@
 <h2>Tickets</h2>
 
    <div style="display: block">
-     <a href="/Tickets/InsertTicket/">Create a New Ticket</a>
+     <a href="/Ticket/InsertTicket/">Create a New Ticket</a>
  </div>
 <table class="table">
     <tr>
-        <th>TicketID</th>
-        <th>TYPE</th>
+        <th>Ticket ID</th>
+        <th>Error Type</th>
         <th>Description</th>
         <th>Priorty</th>
         <th>Status</th>
-        <th>Owner</th>
+        <th>Submitter</th>
     </tr>
 
     @foreach (var ticket in Model)
     {
         <tr>
-            <td>@ticket.TicketId</td>
-            <td>@ticket.ErrorID</td>
+            <td><a href=/Ticket/GetTicketInfo/@ticket.TicketID>@ticket.TicketID</a></td>
+            <td>@ticket.ErrorTypeID</td>
             <td>@ticket.Description</td>
             <td>@ticket.Priority</td>
             <td>@ticket.Status</td>
